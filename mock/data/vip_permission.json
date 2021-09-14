@@ -1,0 +1,56 @@
+{
+    "code": 0,
+    "message": "获取权限成功",
+    "data": [
+        {
+            "authorized": 0,
+            "disableFlag": 1,
+            "icon": "layer-group",
+            "menuId": 130,
+            "menuList": [
+                {
+                    "name": "系统",
+                    "authorized": 0,
+                    "disableFlag": 1,
+                    "icon": "list-ol",
+                    "menuId": 136,
+                    "open": false,
+                    "type": 1,
+                    "url": "project",
+                    "parentId": 130,
+                    "orderNum": 1
+                },
+                {
+                    "name": "环境",
+                    "authorized": 0,
+                    "disableFlag": 1,
+                    "icon": "object-group",
+                    "menuId": 135,
+                    "open": false,
+                    "type": 1,
+                    "url": "env",
+                    "parentId": 130,
+                    "orderNum": 2
+                },
+                {
+                    "name": "应用",
+                    "authorized": 0,
+                    "disableFlag": 1,
+                    "icon": "th-list",
+                    "menuId": 121,
+                    "open": false,
+                    "type": 1,
+                    "url": "app",
+                    "parentId": 130,
+                    "orderNum": 6
+                }
+            ],
+            "name": "应用系统",
+            "url": "/project",
+            "open": false,
+            "type": 0,
+            "parentId": 0,
+            "orderNum": 1
+        }
+    ]
+}
