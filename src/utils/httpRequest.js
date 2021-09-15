@@ -133,7 +133,7 @@ import { Message } from "element-ui";
 const http = {};
 
 var instance = axios.create({
-  timeout: 10000,
+  timeout: 900000,
   // baseURL
 });
 
@@ -157,34 +157,34 @@ instance.interceptors.response.use(
     return response.data;
   },
   (err) => {
-    if (err && err.response) {
-      switch (err.response.status) {
-        case 400:
-          err.message = "请求出错";
-          break;
-        case 401:
-          Message.warning({
-            message: "授权失败，请重新登录",
-          });
-          store.commit("LOGIN_OUT");
-          setTimeout(() => {
-            window.location.reload();
-          }, 1000);
+    // if (err && err.response) {
+    //   switch (err.response.status) {
+    //     case 400:
+    //       err.message = "请求出错";
+    //       break;
+    //     case 401:
+    //       Message.warning({
+    //         message: "授权失败，请重新登录",
+    //       });
+    //       store.commit("LOGIN_OUT");
+    //       setTimeout(() => {
+    //         window.location.reload();
+    //       }, 1000);
 
-          return;
-        case 403:
-          err.message = "拒绝访问";
-          break;
-        case 404:
-          err.message = "请求错误,未找到该资源";
-          break;
-        case 500:
-          err.message = "服务器端出错";
-          break;
-      }
-    } else {
-      err.message = "连接服务器失败";
-    }
+    //       return;
+    //     case 403:
+    //       err.message = "拒绝访问";
+    //       break;
+    //     case 404:
+    //       err.message = "请求错误,未找到该资源";
+    //       break;
+    //     case 500:
+    //       err.message = "服务器端出错";
+    //       break;
+    //   }
+    // } else {
+    //   err.message = "连接服务器失败";
+    // }
     Message.error({
       message: err.message,
     });

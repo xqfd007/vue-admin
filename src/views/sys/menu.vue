@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row :gutter="10">
-      <el-col :span="6">
+      <el-col :span="5">
         <el-form ref="form" :model="dataForm" label-width="80px">
           <el-form-item label="目录名称:">
             <el-input
@@ -10,10 +10,7 @@
             ></el-input>
           </el-form-item>
           <el-form-item label="目录路径:">
-            <el-input
-              v-model="dataForm.url"
-              placeholder="例如'/sys'"
-            ></el-input>
+            <el-input v-model="dataForm.url" placeholder="例如/sys"></el-input>
           </el-form-item>
           <el-form-item label="目录icon:">
             <el-select v-model="dataForm.icon" placeholder="请选择">
@@ -38,7 +35,7 @@
           <el-form-item label="菜单路径:">
             <el-input
               v-model="dataForm.menuurl"
-              placeholder="例如'menu'"
+              placeholder="例如menu"
             ></el-input>
           </el-form-item>
           <el-form-item label="菜单icon:">
@@ -60,6 +57,15 @@
           </el-form-item>
         </el-form>
       </el-col>
+      <el-col :span="12" style="margin-left:50px">
+        <el-input
+          type="textarea"
+          :rows="6"
+          placeholder="请输入内容"
+          v-model="textarea"
+        >
+        </el-input>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -70,6 +76,8 @@ export default {
   name: "addmen",
   data() {
     return {
+      textarea:
+        "目录名称和菜单名称是左侧菜单导航显示的,目标路径前面需要加/,菜单路径不需要加/,添加后在views下新建目录路径名的文件夹,在该文件下新建菜单路径名的.vue文件,菜单新建完事,如果报错可忽略刷新即可",
       dataForm: {
         name: "",
         url: "",

@@ -1,1 +1,106 @@
-{"data":[{"authorized":0,"disableFlag":1,"icon":"cog","menuId":1,"menuList":[{"name":"用户管理","authorized":0,"disableFlag":1,"icon":"user-cog","menuId":2,"open":false,"type":1,"url":"user","parentId":1,"orderNum":1},{"name":"角色管理","authorized":0,"disableFlag":1,"icon":"user-tag","menuId":3,"open":false,"type":1,"url":"role","parentId":1,"orderNum":2},{"name":"菜单管理","authorized":0,"disableFlag":1,"icon":"th-list","menuId":4,"open":false,"type":1,"url":"menu","parentId":1,"orderNum":3}],"name":"系统管理","url":"/sys","open":false,"type":0,"parentId":0,"orderNum":0},{"authorized":0,"disableFlag":1,"icon":"layer-group","menuId":130,"menuList":[{"name":"系统","authorized":0,"disableFlag":1,"icon":"list-ol","menuId":136,"open":false,"type":1,"url":"project","parentId":130,"orderNum":1},{"name":"环境","authorized":0,"disableFlag":1,"icon":"object-group","menuId":135,"open":false,"type":1,"url":"env","parentId":130,"orderNum":2},{"name":"应用","authorized":0,"disableFlag":1,"icon":"th-list","menuId":121,"open":false,"type":1,"url":"app","parentId":130,"orderNum":6}],"name":"应用系统","url":"/project","open":false,"type":0,"parentId":0,"orderNum":1},{"name":"adad","url":"/sss","icon":"th-list","menuicon":"bookmark","menuurl":"dsds","menuname":"dsd","menuList":[{"name":"dsd","icon":"bookmark","url":"dsds"}]},{"name":"dsds","url":"/fdfd","icon":"th-list","menuicon":"tty","menuurl":"sfs","menuname":"fss","menuList":[{"name":"fss","icon":"tty","url":"sfs"}]}],"code":0,"message":"获取权限数据成功"}
+{
+    "data": [
+        {
+            "authorized": 0,
+            "disableFlag": 1,
+            "icon": "cog",
+            "menuId": 1,
+            "menuList": [
+                {
+                    "name": "用户管理",
+                    "authorized": 0,
+                    "disableFlag": 1,
+                    "icon": "user-cog",
+                    "menuId": 2,
+                    "open": false,
+                    "type": 1,
+                    "url": "user",
+                    "parentId": 1,
+                    "orderNum": 1
+                },
+                {
+                    "name": "角色管理",
+                    "authorized": 0,
+                    "disableFlag": 1,
+                    "icon": "user-tag",
+                    "menuId": 3,
+                    "open": false,
+                    "type": 1,
+                    "url": "role",
+                    "parentId": 1,
+                    "orderNum": 2
+                },
+                {
+                    "name": "添加菜单",
+                    "authorized": 0,
+                    "disableFlag": 1,
+                    "icon": "th-list",
+                    "menuId": 4,
+                    "open": false,
+                    "type": 1,
+                    "url": "menu",
+                    "parentId": 1,
+                    "orderNum": 3
+                }
+            ],
+            "name": "系统管理",
+            "url": "/sys",
+            "open": false,
+            "type": 0,
+            "parentId": 0,
+            "orderNum": 0
+        },
+        {
+            "authorized": 0,
+            "disableFlag": 1,
+            "icon": "layer-group",
+            "menuId": 130,
+            "menuList": [
+                {
+                    "name": "系统",
+                    "authorized": 0,
+                    "disableFlag": 1,
+                    "icon": "list-ol",
+                    "menuId": 136,
+                    "open": false,
+                    "type": 1,
+                    "url": "project",
+                    "parentId": 130,
+                    "orderNum": 1
+                },
+                {
+                    "name": "环境",
+                    "authorized": 0,
+                    "disableFlag": 1,
+                    "icon": "object-group",
+                    "menuId": 135,
+                    "open": false,
+                    "type": 1,
+                    "url": "env",
+                    "parentId": 130,
+                    "orderNum": 2
+                },
+                {
+                    "name": "应用",
+                    "authorized": 0,
+                    "disableFlag": 1,
+                    "icon": "th-list",
+                    "menuId": 121,
+                    "open": false,
+                    "type": 1,
+                    "url": "app",
+                    "parentId": 130,
+                    "orderNum": 6
+                }
+            ],
+            "name": "应用系统",
+            "url": "/project",
+            "open": false,
+            "type": 0,
+            "parentId": 0,
+            "orderNum": 1
+        }
+    ],
+    "code": 0,
+    "message": "获取权限数据成功"
+}
