@@ -1,5 +1,4 @@
 #app {
-
   .main-container {
     min-height: 100%;
     transition: margin-left .28s;
@@ -7,6 +6,14 @@
     position: relative;
   }
 
+  .el-submenu.is-opened .is-active {
+    background-image: linear-gradient(to right, #2b2d38, #2b2d38);
+    color: #fff !important;
+  }
+ 
+// .is-active{
+//         background-color: #f33155 !important;
+//   }
   .sidebar-container {
     transition: width 0.28s;
     width: $sideBarWidth !important;
@@ -19,7 +26,6 @@
     left: 0;
     z-index: 1001;
     overflow: hidden;
-
     // reset element-ui css
     .horizontal-collapse-transition {
       transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
@@ -78,6 +84,7 @@
 
     .is-active>.el-submenu__title {
       color: $subMenuActiveText !important;
+        background-color: #f33155 !important;
     }
 
     & .nest-menu .el-submenu>.el-submenu__title,
@@ -89,6 +96,9 @@
         background-color: $subMenuHover !important;
       }
     }
+    .is-active{
+        background-color: #f33155 !important;
+  }
   }
 
   .hideSidebar {

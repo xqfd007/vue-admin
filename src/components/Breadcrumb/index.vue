@@ -95,4 +95,7 @@ export default {
     cursor: text;
   }
 }
+.el-breadcrumb /deep/ .el-breadcrumb__inner {
+  color: #fff !important; //你想要设置的字体颜色
+}
 </style>

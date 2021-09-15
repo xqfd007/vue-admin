@@ -6,6 +6,7 @@
       @click.stop="click"
     />
     <el-select
+      size="mini"
       ref="headerSearchSelect"
       v-model="search"
       :remote-method="querySearch"
@@ -184,6 +185,11 @@ export default {
       box-shadow: none !important;
       border-bottom: 1px solid #d9d9d9;
       vertical-align: middle;
+    }
+    /deep/.el-input__inner {
+      background-color: #2cabe3;
+      border: 0;
+      border-bottom: 1px solid #fff !important;
     }
   }
 

@@ -30,7 +30,7 @@ const homeRouter = {
   path: "dashboard",
   redirect: { path: "dashboard" },
   name: "/dashboard",
-  meta: { title: "dashboard", icon: "tachometer-alt" },
+  meta: { title: "首页", icon: "tachometer-alt" },
 };
 // 主要路由
 const mainRouters = {
@@ -150,7 +150,6 @@ function setChildren(route, childrenRoute) {
       `,
     };
   } else {
-    console.log("二级");
     route["component"] = Layout;
   }
   route["children"] = childrenRoute;
@@ -193,7 +192,7 @@ function fnCreateDynamicRouters(menuList = []) {
     "\n%c!<------------动态(菜单)路由 s  --------------->",
     "color:blue"
   );
-  console.log(routers, "-------动态菜单路由------");
+  console.log(routers);
   console.log(
     "%c!<------------动态(菜单)路由 s  --------------->\n\n",
     "color:blue"
