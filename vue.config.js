@@ -24,7 +24,7 @@ module.exports = {
     proxy: {
       "/dev-api": {
         // 匹配所有以 '/dev-api'开头的请求路径
-        target: "http://localhost:3300", // 代理目标的基础路径
+        target: "http://127.0.0.1:3300", // 代理目标的基础路径
         // target: 'http://47.93.148.192',
         changeOrigin: true, // 支持跨域
         pathRewrite: {
