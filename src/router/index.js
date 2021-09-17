@@ -93,7 +93,7 @@ router.beforeEach(async (to, from, next) => {
         router.options.isAddDynameicMenuRoutes = true;
         next({ ...to, replace: true });
       } catch (error) {
-        console.log(`${error}  请求菜单列表和权限数据失败,跳转到登录页!!`);
+        console.log(`${error}  ,请求菜单列表和权限数据失败,跳转到登录页!!`);
         resetLoginInfo();
         next({ name: "login" });
         NProgress.done();
