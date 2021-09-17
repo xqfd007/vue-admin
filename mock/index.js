@@ -33,6 +33,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(router);
 
-app.listen(3300, () => {
-  console.log("服务器运行在3300");
+app.listen(9527, () => {
+  console.log("服务器运行在9527");
 });
