@@ -65,8 +65,6 @@
           v-model="textarea"
         >
         </el-input>
-
-        <el-tree :data="treeData" :props="defaultProps" @node-click="">
         </el-tree>
       </el-col>
     </el-row>
@@ -80,7 +78,7 @@ export default {
   data() {
     return {
       textarea:
-        "目录名称和菜单名称是左侧菜单导航显示的,目标路径前面需要加/,菜单路径不需要加/,添加后在views下新建目录路径名的文件夹,在该文件下新建菜单路径名的.vue文件,菜单新建完事,如果报错可忽略刷新即可",
+        "目录名称和菜单名称是左侧菜单导航显示的,目标路径前面需要加/,菜单路径不需要加/,添加后在views下新建目录路径名的文件夹,在该文件下新建菜单路径名的.vue文件,菜单新建刷新页面,如果报错可忽略刷新即可",
       dataForm: {
         name: "",
         url: "",
@@ -112,56 +110,6 @@ export default {
         },
       ],
       routes: sessionStorage.getItem("dynamicRouters") || [],
-      treeData: [
-        {
-          id: 1,
-          label: "一级 1",
-          children: [
-            {
-              id: 4,
-              label: "二级 1-1",
-              children: [
-                {
-                  id: 9,
-                  label: "三级 1-1-1",
-                },
-                {
-                  id: 10,
-                  label: "三级 1-1-2",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          id: 2,
-          label: "一级 2",
-          children: [
-            {
-              id: 5,
-              label: "二级 2-1",
-            },
-            {
-              id: 6,
-              label: "二级 2-2",
-            },
-          ],
-        },
-        {
-          id: 3,
-          label: "一级 3",
-          children: [
-            {
-              id: 7,
-              label: "二级 3-1",
-            },
-            {
-              id: 8,
-              label: "二级 3-2",
-            },
-          ],
-        },
-      ],
       defaultProps: {
         children: "children",
         label: "label",
@@ -177,12 +125,12 @@ export default {
           message: "添加菜单成功",
           type: "success",
         });
-        // this.$router.go(0);
+   
       } catch (error) {
-        alert(error);
+        console.log(error);
       }
       // window.location.reload();
-      // this.$router.push("/sys/menu");
+    
     },
   },
   mounted() {
