@@ -1,7 +1,7 @@
 <template>
   <el-breadcrumb class="app-breadcrumb" separator="/">
-    <transition-group name="breadcrumb">
-      <!-- <el-breadcrumb-item v-for="(item, index) in levelList" :key="item.path">
+    <!-- <transition-group name="breadcrumb"> -->
+    <!-- <el-breadcrumb-item v-for="(item, index) in levelList" :key="item.path">
         <span
           v-if="item.redirect === 'noRedirect' || index == levelList.length - 1"
           class="no-redirect"
@@ -9,11 +9,13 @@
         >
         <a v-else @click.prevent="handleLink(item)">{{ item.meta.title }}</a>
       </el-breadcrumb-item> -->
-      <el-breadcrumb-item :to="{ path: '/' }" key="1">首页</el-breadcrumb-item>
-      <el-breadcrumb-item key="2">活动管理</el-breadcrumb-item>
-      <el-breadcrumb-item key="3">活动列表</el-breadcrumb-item>
-      <el-breadcrumb-item key="4">活动详情</el-breadcrumb-item>
-    </transition-group>
+
+    <el-breadcrumb-item :to="{ path: '/dashboard' }">首页</el-breadcrumb-item>
+
+    <el-breadcrumb-item v-for="(item, index) in arr" :key="index">{{
+      item.name
+    }}</el-breadcrumb-item>
+    <!-- </transition-group> -->
   </el-breadcrumb>
 </template>
 
@@ -24,8 +26,47 @@ export default {
   data() {
     return {
       levelList: null,
+      arr: [],
     };
   },
+  watch: {
+    $route: {
+      handler(val) {
+        // console.log(val, "=====");
+        this.breadcrumbData(val);
+      },
+      deep: true,
+      immediate: true,
+    },
+  },
+  methods: {
+    breadcrumbData(v) {
+      // let arr = this.arr;
+      this.arr = [];
+      const path = v.path;
+      // arr = [];
+      const routes = JSON.parse(sessionStorage.getItem("dynamicRouters"));
+      let tmp = routes.filter((item) => {
+        if (item.children && item.children.length) {
+          item.children.filter((v) => {
+            if (v.name == path) {
+              // this.arr.push(item.meta.title);
+              this.arr.push({ name: item.meta.title, url: item.path });
+              this.arr.push({ name: v.meta.title, url: v.name });
+              // this.arr.unshift({ name: "首页", url: "/dshboard" });
+            }
+          });
+        } else {
+          // if ("/" + item.path == path) {
+          //   // this.arr.unshift(item.meta.title);
+          //   this.arr.unshift({ name: item.meta.title, url: v.path });
+          //   console.log(this.arr);
+          // }
+        }
+      });
+    },
+  },
+
   // watch: {
   //   $route(route) {
   //     // if you go to the redirect page, do not update the breadcrumbs

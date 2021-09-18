@@ -14,7 +14,7 @@
         <tags-view v-if="needTagsView" />
       </div>
       <!-- 内容区 -->
-      <app-main />
+      <app-main style="padding-top:10px;padding-left:10px" />
       <right-panel v-if="showSettings">
         <settings />
       </right-panel>
@@ -99,6 +99,7 @@ export default {
   width: calc(100% - #{$sideBarWidth});
   transition: width 0.28s;
 }
+
 .hideSidebar .fixed-header {
   width: calc(100% - 54px);
 }

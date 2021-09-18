@@ -6,6 +6,7 @@ const port = 9528; // dev port
 module.exports = {
   lintOnSave: false,
   configureWebpack: {
+    devtool: "source-map",
     resolve: {
       alias: {
         // eslint-disable-next-line no-undef

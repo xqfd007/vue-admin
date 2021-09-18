@@ -14,9 +14,12 @@ export default {
   name: "exportxls",
   data() {
     return {
-      tableData: [1, 313, "ee", "d", "r"],
+      tableData: `dadakdadadadadhdgdgdgsgsfsfsfsffs      rwrqrqrqrqr
+                   dadadadadd
+      `,
     };
   },
+
   methods: {
     download(data, fileName) {
       if (!data) return;

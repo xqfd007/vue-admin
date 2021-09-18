@@ -5,7 +5,7 @@
       class="tags-view-wrapper"
       @scroll="handleScroll"
     >
-      <router-link ref="tag" class="tags-view-item" to="/">
+      <router-link ref="tag" class="tags-view-item" to="/dashboard">
         Dashboard
         <span class="el-icon-close" />
       </router-link>
