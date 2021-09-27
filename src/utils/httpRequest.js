@@ -186,9 +186,9 @@ instance.interceptors.response.use(
     //   err.message = "连接服务器失败";
     // }
     Message.error({
-      message: err.message,
+      // message: err.message,
     });
-    return Promise.reject(err.response);
+    // return Promise.reject(err.response);
   }
 );
 
@@ -200,9 +200,9 @@ http.get = function(url, options) {
         if (response.code === 0) {
           resolve(response.data);
         } else {
-          Message.error({
-            message: response.message,
-          });
+          // Message.error({
+          //   message: response.message,
+          // });
           reject(response.message);
         }
       })

@@ -1,6 +1,4 @@
 {
-    "code": 0,
-    "message": "获取权限成功",
     "data": [
         {
             "authorized": 0,
@@ -51,6 +49,23 @@
             "type": 0,
             "parentId": 0,
             "orderNum": 1
+        },
+        {
+            "name": "导出",
+            "url": "/xls",
+            "icon": "bath",
+            "menuicon": "th-list",
+            "menuurl": "exportxls",
+            "menuname": "exportxls",
+            "menuList": [
+                {
+                    "name": "exporttxt",
+                    "icon": "th-list",
+                    "url": "exportxls"
+                }
+            ]
         }
-    ]
+    ],
+    "code": 0,
+    "message": "获取权限数据成功"
 }
