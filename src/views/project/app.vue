@@ -1,10 +1,15 @@
 <template>
-  <div>app</div>
+  <div>
+    app
+  </div>
 </template>
 
 <script>
 export default {
   name: "app",
+  methods: {
+    
+  }
 };
 </script>
 

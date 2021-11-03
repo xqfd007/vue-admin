@@ -114,6 +114,21 @@
                     "url": "exportxls"
                 }
             ]
+        },
+        {
+            "name": "表格",
+            "url": "/table",
+            "icon": "bath",
+            "menuicon": "tty",
+            "menuurl": "tb",
+            "menuname": "表格合并",
+            "menuList": [
+                {
+                    "name": "表格合并",
+                    "icon": "tty",
+                    "url": "tb"
+                }
+            ]
         }
     ],
     "code": 0,

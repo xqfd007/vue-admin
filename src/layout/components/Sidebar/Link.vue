@@ -25,7 +25,7 @@ export default {
       return 'router-link'
     }
   },
-  methods: {
+  methos: {
     linkProps(to) {
       if (this.isExternal) {
         return {
