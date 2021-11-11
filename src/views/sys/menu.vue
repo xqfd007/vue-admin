@@ -125,7 +125,7 @@ export default {
           message: "添加菜单成功",
           type: "success",
         });
-   
+       this.dataForm={}
       } catch (error) {
         console.log(error);
       }
