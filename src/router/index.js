@@ -139,7 +139,6 @@ function initRoute(menuItem) {
 }
 function setChildren(route, childrenRoute) {
   if (!/^\/.*/.test(route.path)) {
-    console.log("三级");
     route["component"] = {
       template: `
         <transition name='fade-transform' mode='out-in'>
