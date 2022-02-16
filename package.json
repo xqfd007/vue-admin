@@ -15,6 +15,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "echarts": "5.2.2",
     "element-ui": "^2.4.5",
     "eslint-loader": "^4.0.2",
     "express": "^4.17.1",
