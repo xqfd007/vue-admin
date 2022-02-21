@@ -129,6 +129,22 @@
                     "url": "tb"
                 }
             ]
+        },
+        {
+            "name": "外链",
+            "url": "/disconf",
+            "icon": "birthday-cake",
+            "menuicon": "birthday-cake",
+            "menuurl": "exportxls1",
+            "menuname": "exportxl1s",
+            "menuList": [
+                {
+                    "menuId": "dss",
+                    "name": "exporttx1",
+                    "icon": "calendar-times",
+                    "url": "https://www.baidu.com"
+                }
+            ]
         }
     ],
     "code": 0,
