@@ -15,7 +15,7 @@ export function logout() {
 }
 /* 新增目录菜单 */
 export function addmenu(data) {
-  http.post('dev-api/students/new', data)
+  return http.post('dev-api/students/new', data)
 
   // http({
   //   method: 'post',
@@ -40,10 +40,15 @@ export function addmenu(data) {
   //   name: 'dwe',
   //   age: 13,
   // })
+  
   // http.post('dev-api/students/new', {
   //   params: {
   //     naem: 'ds',
   //     age: 72,
   //   },
+  // })
+
+  // http.post('dev-api/students/new', {
+  //   data: obj,
   // })
 }
