@@ -136,11 +136,20 @@ var instance = axios.create({
   timeout: 900000,
   // baseURL
 });
+const requests = new Map();
 
 // 添加请求拦截器
 instance.interceptors.request.use(
   function(config) {
     // 请求头添加token
+     const oldControl = requests.get(config.url);
+    if (oldControl) {
+      oldControl.abort();
+      requests.delete(config.url);
+    }
+    const control = new AbortController();
+    config.signal = control.signal;
+    requests.set(config.url, control);
     // if (store.state.UserToken) {
     //     config.headers.Authorization = store.state.UserToken
     // }
@@ -154,6 +163,7 @@ instance.interceptors.request.use(
 // 响应拦截器即异常处理
 instance.interceptors.response.use(
   (response) => {
+     requests.delete(response.config.url);
     return response.data;
   },
   (err) => {
